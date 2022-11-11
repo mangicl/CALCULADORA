@@ -25,19 +25,19 @@ while seleccion != 5:
 
     if seleccion == 1:
         print(" ")
-        print("El resultado es ", x, "+", y, "=", x+y)
+        print("Resultado ", x, "+", y, "=", x+y)
         print(" ")
     elif seleccion == 2:
         print(" ")
-        print(x, "x", y, "=", x*y)
+        print("Resultado ", x, "x", y, "=", x*y)
         print(" ")
     elif seleccion == 3:
         print(" ")
-        print(x, "-", y, "=", x-y)
+        print("Resultado ", x, "-", y, "=", x-y)
         print(" ")
     elif seleccion == 4:
         print(" ")
-        print(x, "/", y, "=", x/y)
+        print("Resultado ", x, "/", y, "=", x/y)
         print(" ")
     elif seleccion == 5:
         print(" ")
