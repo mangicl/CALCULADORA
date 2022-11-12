@@ -7,6 +7,8 @@
 # Developer: H. Leandro Mangicavalli
 #******************************************
 
+import math
+
 x = float(input("Ingrese el valor de X para la operacion: "))
 
 y = float(input("Ingrese el valor de Y para la operacion: "))
@@ -38,12 +40,17 @@ while True:
         print("Resultado ", x, "-", y, "=", x-y)
         print(" ")
     elif seleccion == 4:
+        if x == 0:
+            print("""El cero no es un numero divisible.
+            Elija otra opcion...""")
+            break
         print(" ")
         print("Resultado ", x, "/", y, "=", x/y)
         print(" ")
     elif seleccion == 5:
-        x = int(input("Ingrese un nuevo valor de X para la operacion: "))
-        y = int(input("Ingrese un nuevo valor de Y para la operacion: "))
+        del x, y,
+        x = float(input("Ingrese un nuevo valor de X para la operacion: "))
+        y = float(input("Ingrese un nuevo valor de Y para la operacion: "))
     elif seleccion == 6:
         print(" ")
         print("Ha salido de la calculadora")
