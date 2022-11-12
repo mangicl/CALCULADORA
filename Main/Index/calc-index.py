@@ -7,9 +7,9 @@
 # Developer: H. Leandro Mangicavalli
 #******************************************
 
-x = int(input("Ingrese el valor de X para la operacion: "))
+x = float(input("Ingrese el valor de X para la operacion: "))
 
-y = int(input("Ingrese el valor de Y para la operacion: "))
+y = float(input("Ingrese el valor de Y para la operacion: "))
 
 seleccion = 0
 
