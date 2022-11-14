@@ -14,35 +14,38 @@ def resta(x,y):
 def division(x,y):
     return x/y            
 def menu(x,y):
-    while True:
-        print(f"""Seleccione el tipo de operacion con X={x} y con Y={y}:
-        s) x + y
-        m) x * y
-        r) x - y
-        d) x / y
-        0) RESET
-        6) SALIR""")
-        seleccion = input()
-        if seleccion == 's':
-            print(f"Resultado ", x, "+", y, "=", x+y)
-        elif seleccion == 'm':
-            print(f"Resultado ", x, "x", y, "=", x*y)
-        elif seleccion == 'r':
-            print(f"Resultado ", x, "-", y, "=", x-y)
-        elif seleccion == 'd':
-            print(f"Resultado ", x, "/", y, "=", x/y)
-            if x == 0:
-                print("""El cero no es un numero divisible.
-            Elija otra opcion...""")
+        while True:
+            print(f"""Seleccione el tipo de operacion con X={x} y con Y={y}:
+            s) x + y
+            m) x * y
+            r) x - y
+            d) x / y
+            0) RESET DE VALORES
+            1) GUARDAR EL RESULTADO EN MEMORIA
+            2) Asignar MEMORIA a: X
+            3) Asignar MEMORIA a: Y
+            e) SALIR""")
+            
+            seleccion = input()
+            if seleccion == 'c':
+                x = float(input("Ingrese un nuevo valor de X para la operacion: "))
+                y = float(input("Ingrese un nuevo valor de Y para la operacion: "))
+                print("Se han reseteado los valores")
+            if seleccion == 's':
+                print(f"Resultado: {x} + {y} = {suma(x,y)}")
+            elif seleccion == 'm':
+                print(f"Resultado: {x} x {y} = {multimplicacion(x,y)}")
+            elif seleccion == 'r':
+                print(f"Resultado: {x} - {y} = {resta(x,y)}")
+            elif seleccion == 'd':
+                print(f"Resultado: {x} / {y} = {division(x,y)}")
+            elif seleccion == "e":
+                print(f"Ha salido de la calculadora")
                 break
-        if seleccion == 0:
-            del x,y
-        if seleccion == 6:
-            print(f"Ha salido de la calculadora")
-            break
-        input("Presione cualquier tecla para continuar")
-        os.system("cls")
-
+            
+            input("Presione cualquier tecla para continuar operando con los mismos valores")
+            os.system("cls")
+        
 a,b = ingresarValores()
 menu (a,b)            
         
