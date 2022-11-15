@@ -19,17 +19,18 @@ y = float(input("Ingrese el valor de Y para la operacion: "))
 seleccion = 0
 
 while True:
-    if seleccion != 10:
+    if seleccion != 11:
         print("""Seleccione el tipo de operacion:
         1) x + y
         2) x * y
         3) x - y
         4) x / y
         5) x ^ y
-        6) RESET
-        7) Asignar el resultado a X y seguir operando
-        8) Asignar el resultado a Y y seguir operando
-        9) SALIR""")
+        6) x √ y
+        7) RESET
+        8) Asignar el resultado a X y seguir operando
+        9) Asignar el resultado a Y y seguir operando
+        10) SALIR""")
     seleccion = float(input("Elija una opcion: "))
     if seleccion == 1:
         print(" ")
@@ -61,15 +62,20 @@ while True:
         resultado = x**y
         print(" ")
     elif seleccion == 6:
-        x = float(input("Ingrese un nuevo valor de X para la operacion: "))
-        y = float(input("Ingrese un nuevo valor de Y para la operacion: "))
+        print(" ")
+        print("Resultado ", x, "√", y, "=", y**(1/x))
+        resultado = y**(1/x)
+        print(" ")
     elif seleccion == 7:
-        x = resultado
+        x = float(input("Ingrese un nuevo valor de X para la operacion: "))
         y = float(input("Ingrese un nuevo valor de Y para la operacion: "))
     elif seleccion == 8:
+        x = resultado
+        y = float(input("Ingrese un nuevo valor de Y para la operacion: "))
+    elif seleccion == 9:
         x = float(input("Ingrese un nuevo valor de X para la operacion: "))
         y = resultado
-    elif seleccion == 9:
+    elif seleccion == 10:
         print(" ")
         print("Ha salido de la calculadora")
         print(" ")
