@@ -22,29 +22,47 @@ def menu(x,y):
             d) x / y
             0) RESET DE VALORES
             1) GUARDAR EL RESULTADO EN MEMORIA
-            2) Asignar MEMORIA a: X
-            3) Asignar MEMORIA a: Y
+            2) Asignar RESULTADO a: X
+            3) Asignar RESULTADO a: Y
             e) SALIR""")
             
             seleccion = input()
-            if seleccion == 'c':
-                x = float(input("Ingrese un nuevo valor de X para la operacion: "))
-                y = float(input("Ingrese un nuevo valor de Y para la operacion: "))
-                print("Se han reseteado los valores")
             if seleccion == 's':
                 print(f"Resultado: {x} + {y} = {suma(x,y)}")
+                resultado=suma
             elif seleccion == 'm':
                 print(f"Resultado: {x} x {y} = {multimplicacion(x,y)}")
+                resultado=multimplicacion
             elif seleccion == 'r':
                 print(f"Resultado: {x} - {y} = {resta(x,y)}")
+                resultado=resta
             elif seleccion == 'd':
+                if y == 0:
+                    print("""El cero no es un numero divisible.
+                    Elija otra opcion...""")
+                    continue
                 print(f"Resultado: {x} / {y} = {division(x,y)}")
+                resultado=division
+            
+
+            elif seleccion == 2:
+                    x = float(input("Ingrese un nuevo valor de X para la operacion: "))
+                    y = float(input("Ingrese un nuevo valor de Y para la operacion: "))
+            elif seleccion == 6:
+                    x = resultado
+                    y = float(input("Ingrese un nuevo valor de Y para la operacion: "))
+
+
+
+
+
+
             elif seleccion == "e":
                 print(f"Ha salido de la calculadora")
                 break
             
             input("Presione cualquier tecla para continuar operando con los mismos valores")
-            os.system("cls")
+        os.system("cls")
         
 a,b = ingresarValores()
 menu (a,b)            
